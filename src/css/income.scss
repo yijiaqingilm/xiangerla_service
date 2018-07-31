@@ -1,0 +1,52 @@
+@import "globalFunc";
+
+.order-detail {
+  padding: 35px;
+  @include setFontSize($baseFontSize);
+  .o-detail {
+    position: relative;
+    padding: 20px 0;
+    color: $gray_color;
+    :after {
+      @include onepx
+    }
+  }
+  .o-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .o-number {
+      span:nth-child(1) {
+        color: #333333;
+      }
+    }
+  }
+  .o-status {
+    padding: 20px 0;
+    color: $gray_color;
+  }
+  .o-sku-ctrl {
+    header {
+      padding: 20px 0;
+    }
+    .sku-list {
+      width: 100%;
+      color: $gray_color;
+      .sku-list-item {
+        position: relative;
+        padding: 10px 0;
+        :after {
+          @include onepx
+        }
+        .sku-cashback {
+          color: red;
+        }
+        .sku-quantity {
+          margin-left: 20px;
+          color: green;
+        }
+      }
+    }
+
+  }
+}
